@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout Form | Soirée's Designs</title>
+<meta charset="UTF-8">
+<meta name="description" content="Our check out form makes it easy and convenient to purchase these one-of-a-kind items, allowing customers to effortlessly bring a touch of sophistication and style into their spaces. Whether you're looking for a special gift for a loved one or hoping to elevate the ambiance of your own home, Soirees Designs has something for everyone.">
+<meta name="keywords" content="checkout form, decoration, event, party favors, gifts, cart, products, soirees designs">
+<meta name="author" content="Shanise Holder">
+<meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="./images/favicon.ico"> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body 
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a.active {
+  background-color: #00A09E;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+li {
+  float: right;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-family: Trebuchet MS, sans-serif;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #00A09E;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  font-color: black;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+.footer {
+  background-color: #000000;
+  color: white;
+  padding: 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #000000;
+  color: white;
+}
+
+.fa-twitter {
+  background: #000000;
+  color: white;
+}
+
+.fa-youtube {
+  background: #000000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #000000;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+  <div class="topnav" id="myTopnav">
+  <a href="index.html"><img src="./images/soirees designs transparent.png" alt="Soirée's Designs Logo" width="50px"></a>
+  <li><a href="contact.html">Contact</a><i class="fa fa-shopping-cart" style="color: white; margin: 17px;"></i>
+</li>
+  <li><a href="blog.html">Blog</a></li>
+  <li class="dropdown">
+    <a href="product.html" class="dropbtn">Products</a>
+    <div class="dropdown-content">
+      <a href="anniversary.html">Anniversary</a>
+      <a href="baby shower.html">Baby Shower</a>
+      <a href="birthday.html">Birthdays</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="graduation.html">Graduation</a>
+      <a href="holidays.html">Holidays</a>
+      <a href="monogram.html">Monogram</a>
+      <a href="wedding.html">Wedding</a>
+  <li><a href="about.html">About</a></li>
+  <li><a href="index.html" class="active">Home</a></li>
+  </a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+
+<div class="row" style="font-family: Arial; font-size: 17px; padding: 8px;">
+  <div class="col-75">
+    <div class="container" style="margin: 15px;">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Kelly S. Clarke">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="Kelly@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> Country</label>
+            <input type="text" id="country" name="country" placeholder="Trinidad and Tobago">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="area">Area</label>
+                <input type="text" id="area" name="state" placeholder="POS">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="Kelly Saul Clarke">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="October">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2026">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+      </form>
+        <div class="w3-container">
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-amber" style="width:100%; color: black;">Continue to checkout</button>
+
+  <div id="id01" class="w3-modal" style="overflow: auto;">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p><img src="./images/thank you.jpg" alt="Thank You Image" style="display: block; margin-left: auto;
+  margin-right: auto;" width="80%" height="75%"></p>
+        <h1 style="text-align: center;">Shanise Holder</h1>
+        <p style="text-align: center;">You'll receive a confirmation email soon</p>
+        <p style="text-align: center;">Order number 100gg</p>
+        <p style="text-align: center; color: dodgerblue;"><a href="product.html">Continue Shopping</a></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  <div class="col-25">
+    <div class="container"style="margin: 15px;">
+      <h4><a href="shoppingcart.html">See Your Cart</a><span class="price" style="color:black;"><i class="fa fa-shopping-cart"></i> <b>3</b></span></h4>
+      <p><a href="orangerose.html" style="color: #2196F3;">Pearlized Paper Rose</a> <span class="price">$300</span></p>
+      <p><a href="hexagonboxes.html" style="color: #2196F3;">Hexagon Boxes</a> <span class="price">$35</span></p>
+      <p><a href="rosettes.html" style="color: #2196F3;">Rosettes</a> <span class="price">$15</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$350</b></span></p>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="footer">
+<script>// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}</script>
+<h2 style="font-family: impact;">FIND US</h2>
+  <p><b><h5>ADDRESS:</h5></b></p>
+  <p>Trinidad and Tobago</p>
+  <p><b><h5>EMAIL:</h5></b></p>
+  <p>soireesdesigns@gmail.com</p>
+  <a href="https://www.facebook.com/soireesdesigns"target="_blank" class="fa fa-facebook" style="padding: 20px; font-size: 30px; width: 50px; text-align: center; text-decoration: none;margin: 5px 2px;"></a>
+  <a href="https://www.x.com/soireesdesigns"target="_blank" class="fa fa-twitter" style="padding: 20px; font-size: 30px; width: 50px; text-align: center; text-decoration: none;margin: 5px 2px;"></a>
+  <a href="https://www.youtube.com/@soireesdesigns"target="_blank" class="fa fa-youtube" style="padding: 20px; font-size: 30px; width: 50px; text-align: center; text-decoration: none;margin: 5px 2px;"></a>
+  <a href="https://www.instagram.com/soireesdesigns"target="_blank" class="fa fa-instagram" style="padding: 20px; font-size: 30px; width: 50px; text-align: center; text-decoration: none;margin: 5px 2px;"></a>
+
+  <p style="text-align: center;"><a href="TermsnConditions.html">Terms and Conditions</a> <a href="Privacy.html">Privacy Policy</a> <a href="about.html">About</a> <a href="product.html">Products</a> <a href="blog.html">Blog</a> <a href="contact.html">Contact</a> <a href="ReturnsPolicy.html">Returns</a> <a href="cancellation.html">Cancellation Policy</a> <a href="cookies.html">Cookies</a></p>
+  <p style="text-align: center;">Copyright 2024 &copy; Soirée's Designs.All Rights Reserved.</p>
+
+
+</div>
+</body>
+</html>

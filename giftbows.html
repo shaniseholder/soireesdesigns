@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gift Bows | Soirée's Designs</title>
+<meta charset="UTF-8">
+<meta name="description" content="Soirees Designs offers beautifully handcrafted gift bows that are the perfect finishing touch to any present. Made with care and attention to detail, these bows add a touch of elegance and sophistication to any gift. Each bow is unique and made with high-quality materials, ensuring that your gift will stand out and make a lasting impression. Whether it's for a birthday, wedding, or any special occasion, Soirees Designs handmade gift bows are sure to make your gift even more special.">
+<meta name="keywords" content="gift bows, event, birthdays, weddings, christmas, baby showers, anniversary, corporate events, soirees designs">
+<meta name="author" content="Shanise Holder">
+<meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="./images/favicon.ico"> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  margin: 0;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a.active {
+  background-color: #00A09E;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+li {
+  float: right;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-family: Trebuchet MS, sans-serif;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #00A09E;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  font-color: black;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+h1 {
+  font-family: impact;
+}
+.checked {
+  color: orange;
+}
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+img id{ 
+display: block;
+object-fit: cover;
+max-width: 800px;
+border-radius: 10px;
+margin-right: auto;
+ }
+
+ .w3-container {
+  margin: 10px auto;
+  width: 75%;
+ }
+ .card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+  font-size: 18px;
+  margin-left: -4px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+ .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+input[type=text], select, textarea {
+  width: 31%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 90%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 85%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 0%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 0%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 0%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+ 
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #000000;
+  color: white;
+}
+
+.fa-twitter {
+  background: #000000;
+  color: white;
+}
+
+.fa-youtube {
+  background: #000000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #000000;
+  color: white;
+}
+.container {
+  border: 2px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .container {
+      text-align: center;
+  }
+  .container img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+.footer {
+  background-color: #000000;
+  color: white;
+  padding: 5px;
+} 
+</style>
+</head>
+<body>
+  <nav>
+  <ul>
+  <div class="topnav" id="myTopnav">
+  <a href="index.html"><img src="./images/soirees designs transparent.png" alt="Soirée's Designs Logo" width="50px"></a> 
+  <li><a href="contact.html">Contact</a><i class="fa fa-shopping-cart" style="color: white; margin: 17px;"></i></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li class="dropdown">
+    <a href="product.html" class="dropbtn, active">Products</a>
+    <div class="dropdown-content">
+      <a href="anniversary.html">Anniversary</a>
+      <a href="baby shower.html">Baby Shower</a>
+      <a href="birthday.html">Birthdays</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="graduation.html">Graduation</a>
+      <a href="holidays.html">Holidays</a>
+      <a href="monogram.html">Monogram</a>
+      <a href="wedding.html">Wedding</a>
+  <li><a href="about.html">About</a></li>
+  <li><a href="index.html">Home</a></li>
+  </a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Products -->
+<div id="product.html" class="w3-container w3-padding-32">
+<h2 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="text-align: center; font-family: Times New Roman, sans-serif; font-size: 50px;">Products</h2>
+</div>
+<body>
+	<div class="w3-container">
+  <div class="clearfix">
+  <img id="myImg" src="./images/gift bows.jpg" alt="Gift Bows "style="height:400px;margin-right:15px; float:left;"><h1>Gift Bows</h1><p>Price: $3.00+</p><form action="/action_page.php">
+  <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="100"><br>
+  <br><label for="colour">Main Colour:</label>
+  <input type="color" id="colour" name="colour" value="#ff4500"><br>
+   <br><label for="size">Size & Pattern:</label>
+    <select id="size" name="size">
+      <option value="select an option">Select an option</option>
+      <option value="type1">Small Plain ($3.00)</option>
+      <option value="type1">Small Double Ribbon($6.00)</option>
+      <option value="type1">Small Triple Ribbon($8.00)</option>
+      <option value="type1">Medium Plain ($10.00)</option>
+      <option value="type1">Medium Double ($15.00)</option>
+      <option value="type1">Medium Triple ($25.00)</option>
+      <option value="type1">Large Plain ($30.00)</option>
+      <option value="type1">Large Double ($35.00)</option>
+      <option value="type1">Large Triple ($45.00)</option>
+  </select>
+  <br><label for="colour">Stripe Colours:</label>
+  <select id="colour" name="colour">
+      <option value="select an option">Select an option</option>
+      <option value="none">none</option>
+      <option value="white">White</option>
+      <option value="black">Black</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+      <option value="green">Green</option>
+      <option value="limegreen">Lime Green</option>
+      <option value="babypink">Baby Pink</option>
+      <option value="gold">Gold</option>
+      <option value="sliver">Sliver</option>
+      <option value="lightgold">Light Gold</option>      
+      <option value="blue">Blue</option>
+      <option value="hotpink">Hot Pink</option>     
+      <option value="purple">Purple</option>
+    </select>
+</form>
+    <br><div class="card" style="padding-right: 45px;"><button style="font-family:impact; font-size: 20px; float: right; width: 45%; margin-bottom: 10px;"><div class="popup" onclick="myFunction()">ADD TO CART<span class="popuptext" id="myPopup" style="font-family:Georgia, sans-serif;">item added to your cart!</span></div>
+    <br><div class="card" style="padding-right: 45px;"><button style="font-family:impact; font-size: 20px; float: right; width: 45%;background-color: gold;"><a href="checkoutform.html" style="text-decoration: none; color: black;">BUY NOW</a></button></button>
+</div>
+  </div>
+  </div>
+</div>
+  <button type="button" class="collapsible" style="border-style: ridge; margin: 25px; margin-bottom: 20px; width: 96%; align-content: center;"><b class="ridge">Product Description</b><i class="arrow down" style="float: right;"></i></button>
+<div class="content">
+<p style="text-align: justify; margin: 25px; width: 96%;">Soirees Designs offers a unique and elegant collection of handmade gift bows, featuring intricate designs and patterns that are sure to add a touch of sophistication to any present. These beautifully crafted bows are perfect for adding a special finishing touch to gifts for birthdays, holidays, weddings, and other special occasions. Each bow is created with attention to detail and care, ensuring that it will make a lasting impression on the recipient. Whether you're looking for a classic bow with a timeless pattern or a more modern design, Soirees Designs has a wide range of options to choose from, making it easy to find the perfect bow for any gift-giving occasion.</p></div>
+<button type="button" class="collapsible" style="border-style: ridge; margin: 25px; margin-top: -35px; width: 96%; align-content: center;"><b class="ridge">Reviews</b><i class="arrow down" style="float: right;"></i></button>
+<div class="content">
+<span class="heading" style="margin: 25px; width: 96%;">User Rating</span>
+<span class="fa fa-star checked" style="font-size: 25px; cursor: pointer;"></span>
+<span class="fa fa-star checked" style="font-size: 25px; cursor: pointer;"></span>
+<span class="fa fa-star checked" style="font-size: 25px; cursor: pointer;"></span>
+<span class="fa fa-star checked" style="font-size: 25px; cursor: pointer;"></span>
+<span class="fa fa-star" style="font-size: 25px; cursor: pointer;"></span>
+<p style="margin: 25px; width: 96%;">4.1 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1; margin: 25px; width: 96%;">
+
+<div class="row" style="margin: 25px; width: 96%;">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>750</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>200</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>0</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>0</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>0</div>
+  </div>
+</div> 
+<div class="container">
+  <img src="./images/up.jpg" alt="Avatar" style="width:90px">
+  <p><span>Laurn</span></p>
+  <p style="color: gray;">Main Colour: White | Size & Pattern: Medium Triple | Stripe Colours: Red |<b style="color:red; font-size:12px"> Verified Purchase</b></p>
+  <p>Perfect! I love these. Very special.</p>
+</div> 
+<div class="container">
+  <img src="./images/up.jpg" alt="Avatar" style="width:90px">
+  <p><span>Kathleen</span></p>
+  <p style="color: gray;">Main Colour: Red | Size & Pattern: Small Plain |<b style="color:red; font-size:12px"> Verified Purchase</b></p>
+  <p>Lovey quality and packaging. They are just as pictured.</p>
+</div>
+<div class="container">
+  <img src="./images/up.jpg" alt="Avatar" style="width:90px">
+  <p><span>Nancy</span></p>
+  <p style="color: gray;">Main Colour: Green | Size & Pattern: Large Triple | Stripe Colours: Red |<b style="color:red; font-size:12px"> Verified Purchase</b></p>
+  <p>We had the hardest time finding unique bows; thrilled when we found yours! I can't wait to use them when I start wrapping! Well made, sturdy and a beautiful! Thanks so much!</p>
+</div>
+<div class="container">
+  <img src="./images/up.jpg" alt="Avatar" style="width:90px">
+  <p><span>Jennifer</span></p>
+  <p style="color: gray;">Main Colour: Blue | Size & Pattern: Large Plain |<b style="color:red; font-size:12px"> Verified Purchase</b></p>
+  <p>Great quality. Fast and careful shipping</p>
+</div>
+<div class="container">
+<img src="./images/up.jpg" alt="Avatar" style="width:90px">
+<p><span>Sonya</span></p>
+  <p style="color: gray;">Main Colour: White | Size & Pattern: Medium Triple | Stripe Colours: Green |<b style="color:red; font-size:12px"> Verified Purchase</b></p>
+  <p>These bows were exactly as described! Beautiful colors, & lots of choices! Don't hesitate to buy, I will be ordering again!</p>
+</div>
+<hr>
+<p style="float: left;"><b><a href="#">Write a comment</a></b></p>
+<p style="float: right;"><b><a href="#">See more reviews</a></b></p>
+<br><br>
+</div>
+
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+  <div class="footer">
+ <h2 style="font-family: impact;">FIND US</h2>
+  <p><b><h5>ADDRESS:</h5></b></p>
+  <p>Trinidad and Tobago</p>
+  <p><b><h5>EMAIL:</h5></b></p>
+  <p>soireesdesigns@gmail.com</p>
+  <a href="https://www.facebook.com/soireesdesigns"target="_blank" class="fa fa-facebook" style="padding: 20px; font-size: 30px; width: 50px; text-align: center; text-decoration: none;margin: 5px 2px;"></a>
+  <a href="https://www.x.com/soireesdesigns"target="_blank" class="fa fa-twitter" style="padding: 20px; font-size: 30px; width: 50px; text-align: center; text-decoration: none;margin: 5px 2px;"></a>
+  <a href="https://www.youtube.com/@soireesdesigns"target="_blank" class="fa fa-youtube" style="padding: 20px; font-size: 30px; width: 50px; text-align: center; text-decoration: none;margin: 5px 2px;"></a>
+  <a href="https://www.instagram.com/soireesdesigns"target="_blank" class="fa fa-instagram" style="padding: 20px; font-size: 30px; width: 50px; text-align: center; text-decoration: none;margin: 5px 2px;"></a>
+  <p style="text-align: center;"><a href="TermsnConditions.html">Terms and Conditions</a> <a href="Privacy.html">Privacy Policy</a> <a href="about.html">About</a> <a href="product.html">Products</a> <a href="blog.html">Blog</a> <a href="contact.html">Contact</a> <a href="ReturnsPolicy.html">Returns</a> <a href="cancellation.html">Cancellation Policy</a> <a href="cookies.html">Cookies</a></p>
+  <p style="text-align: center;">Copyright 2024 &copy; Soirée's Designs.All Rights Reserved.</p>
+
+</div>
+</body>
+</html>
